@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Tokens visuais do projeto */
+:root {
+  --color-primary: #2563eb;
+  --color-secondary: #22d3ee;
+  --color-bg: #f9fafb;
+  --radius-xl: 1.5rem;
+}
+
+/* Foco visível para acessibilidade */
+:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
