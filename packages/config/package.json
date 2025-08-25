@@ -1,0 +1,6 @@
+{
+  "name": "@gescondo/config",
+  "version": "1.0.0",
+  "main": "eslint.config.js",
+  "private": true
+}

@@ -1,0 +1,27 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Condominium {
+  id        Int      @id @default(autoincrement())
+  name      String
+  address   String
+  cnpj      String?
+  createdAt DateTime @default(now())
+  blocks    Block[]
+}
+
+model Block {
+  id            Int      @id @default(autoincrement())
+  name          String
+  condominiumId Int
+  condominium   Condominium @relation(fields: [condominiumId], references: [id], onDelete: Cascade)
+  units         Unit[]
+}
+
+// Continue modelagem conforme especificação...
